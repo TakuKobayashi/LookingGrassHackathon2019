@@ -21,6 +21,7 @@ public class CharacterController : SingletonBehaviour<CharacterController>
     {
         Character character = ComponentUtil.InstantiateTo<Character>(this.gameObject, characterObj);
         Vector3 targetPosition = previewField.transform.position;
+        targetPosition.z -= previewField.GetCamDistance();
         character.InputPreviewTarget(targetPosition);
         characters.Add(character);
     }

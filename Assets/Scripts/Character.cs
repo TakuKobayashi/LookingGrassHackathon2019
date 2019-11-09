@@ -25,8 +25,8 @@ public class Character : MonoBehaviour
         {
             yield return null;
         }
-//        this.threedObject.transform.position = targetPos;
-        this.threedObject.transform.position = targetPos;
+        //this.threedObject.transform.position = targetPos;
+        this.threedObject.transform.LookAt(targetPos);
     }
 
     // Update is called once per frame
