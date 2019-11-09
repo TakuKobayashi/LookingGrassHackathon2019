@@ -17,8 +17,10 @@
     "firebase-functions": "^3.3.0"
   },
   "devDependencies": {
-    "typescript": "^3.2.2",
-    "firebase-functions-test": "^0.1.6"
+    "@types/node": "^12.12.7",
+    "firebase-functions-test": "^0.1.6",
+    "prettier": "^1.19.0",
+    "typescript": "^3.2.2"
   },
   "private": true
 }
