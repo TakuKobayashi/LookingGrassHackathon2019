@@ -1,8 +1,8 @@
-import * as functions from 'firebase-functions';
+import {region, Request, Response} from "firebase-functions";
 
 // // Start writing Firebase Functions
 // // https://firebase.google.com/docs/functions/typescript
 //
-export const sample = functions.https.onRequest((request: functions.Request, response: functions.Response) => {
+export const sample = region("asia-northeast1").https.onRequest((request: Request, response: Response) => {
   response.json({state: "success"});
 });
