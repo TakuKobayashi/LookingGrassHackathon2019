@@ -19,6 +19,7 @@ public class Hand : MonoBehaviour
  private void Start() {
         
         StartCoroutine(loop());
+        this.feed = this.feeds[0];
     }
 
     public void setTarget(GameObject target)
@@ -95,10 +96,15 @@ public class Hand : MonoBehaviour
 			methods: HTTPMethods.Get,
 			onSuccess: (dh) =>
 			{
-				SampleModel sample = JsonConvert.DeserializeObject<SampleModel>(dh.text);
-				Debug.Log(int.Parse(sample.val));
+				// SampleModel sample = JsonConvert.DeserializeObject<SampleModel>(dh.text);
+				// Debug.Log(int.Parse(sample.val));
+                // if(sample.val){
          
-                this.feed = this.feeds[int.Parse(sample.val)];
+                //     this.feed = this.feeds[int.Parse(sample.val)];
+                // }else{
+                //     this.feed = this.feeds[0];
+                // }
+                this.feed = this.feeds[0];
 			}
 		);
 }
