@@ -2838,7 +2838,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec0e8b0279d7e44f87f618a6580402a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  feed: {fileID: 159700, guid: 4111a63ec6a85c744a305e1dfd0869f9, type: 3}
+  feeds:
+  - {fileID: 159700, guid: 4111a63ec6a85c744a305e1dfd0869f9, type: 3}
+  - {fileID: 1000013808630610, guid: eae0d75f8edbe3349b65105f0c6b5665, type: 3}
   handPosition: {fileID: 1927749801}
 --- !u!1 &1176840648
 GameObject:
@@ -3453,7 +3455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1506358950
 MeshRenderer:
   m_ObjectHideFlags: 0

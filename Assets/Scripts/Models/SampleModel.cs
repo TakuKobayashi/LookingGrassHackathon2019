@@ -1,5 +1,5 @@
 ﻿using System;
 public class SampleModel
 {
-    public string state;
+    public string val;
 }

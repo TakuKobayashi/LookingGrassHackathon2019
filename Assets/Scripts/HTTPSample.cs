@@ -16,7 +16,6 @@ public class HTTPSample : MonoBehaviour
 				//				JsonUtility.FromJson<>(dh.text);
 				Debug.Log(dh.text);
 				SampleModel sample = JsonConvert.DeserializeObject<SampleModel>(dh.text);
-				Debug.Log(sample.state);
 			}
 		);
 	}
@@ -26,4 +25,5 @@ public class HTTPSample : MonoBehaviour
     {
         
     }
+	
 }
