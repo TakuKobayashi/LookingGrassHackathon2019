@@ -35,6 +35,22 @@ public class Character : MonoBehaviour
         StartCoroutine(LoiterRandomRoutine());
     }
 
+    public void InitDefaults(Vector3 defaultPosition, Vector3 defaultScale)
+    {
+        StartCoroutine(DefaultSetup(defaultPosition, defaultScale));
+    }
+
+    private IEnumerator DefaultSetup(Vector3 defaultPosition, Vector3 defaultScale)
+    {
+        while(this.threedObject == null)
+        {
+            yield return null;
+        }
+        //this.threedObject.transform.position = targetPos;
+        this.threedObject.transform.position = defaultPosition;
+        this.threedObject.transform.localScale = defaultScale;
+    }
+
     public void ChangetToTriggerAnimation(CharacterState state)
     {
         this.currentState = state;
