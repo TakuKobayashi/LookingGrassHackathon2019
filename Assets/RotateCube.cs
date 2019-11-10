@@ -13,7 +13,7 @@ public class RotateCube : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3(0, 1, 0));
+        transform.Rotate(new Vector3(00, 0.01f, 0));
 
     }
 }

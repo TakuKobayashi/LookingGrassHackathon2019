@@ -96,8 +96,9 @@ public class Hand : MonoBehaviour
 			onSuccess: (dh) =>
 			{
 				SampleModel sample = JsonConvert.DeserializeObject<SampleModel>(dh.text);
-				
-                this.feed = this.feeds[(int)sample.val];
+				Debug.Log(int.Parse(sample.val));
+         
+                this.feed = this.feeds[int.Parse(sample.val)];
 			}
 		);
 }

@@ -9872,6 +9872,8 @@ GameObject:
   - component: {fileID: 5301917520074977057}
   - component: {fileID: 7844095610826727761}
   - component: {fileID: 2014294121192424876}
+  - component: {fileID: 976736001160204882}
+  - component: {fileID: 2744633019128033521}
   m_Layer: 0
   m_Name: "\u30D2\u30E9\u30EA\u30C1\u30E3\u30F3_v4\u732B\u8033"
   m_TagString: Untagged
@@ -10155,6 +10157,34 @@ MonoBehaviour:
       m_RotationOrder: 4
     CurveXRangeDegree: 90
     CurveYRangeDegree: 6.3142085
+--- !u!114 &976736001160204882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9039251098881793050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1f94b1e09477c4283d005921f7beb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eatEffect: {fileID: 960633763153292920, guid: 5098f3d7160de4248bcc8dcb8e0f8aed,
+    type: 3}
+  offset: {x: 0, y: 2.14, z: 0}
+--- !u!65 &2744633019128033521
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9039251098881793050}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.54, z: 0}
 --- !u!1 &9095982169604681040
 GameObject:
   m_ObjectHideFlags: 0
@@ -13265,10 +13295,10 @@ Avatar:
     3730490315: Root/Global/Position/J_Bip_C_Hips/J_Bip_C_Spine/J_Bip_C_Chest/J_Bip_C_UpperChest/J_Bip_C_Neck/J_Bip_C_Head/HairJoint-3478a64d-52c3-4951-95fa-f9c0d3451f60
     3359566181: Root/Global/Position/J_Bip_C_Hips/J_Bip_C_Spine/J_Bip_C_Chest/J_Bip_C_UpperChest/J_Bip_C_Neck/J_Bip_C_Head/HairJoint-493c33b3-af96-49fd-9283-b9ecbaeb81b5
     1495475291: Root/Global/Position/J_Bip_C_Hips/J_Bip_C_Spine/J_Bip_C_Chest/J_Bip_C_UpperChest/J_Bip_C_Neck/J_Bip_C_Head/HairJoint-d81a1dc0-d752-41f2-b1c3-5bc4dcd308b3/HairJoint-05fb8bee-dfc3-488c-84cf-daae42ba37c1/HairJoint-53da683e-d670-48d3-860f-e33f4112832b
-    2364324909: Root/Global/Position/J_Bip_C_Hips/J_Bip_C_Spine/J_Bip_C_Chest/J_Bip_C_UpperChest/J_Bip_R_Shoulder/J_Bip_R_UpperArm/J_Bip_R_LowerArm/J_Bip_R_Hand/J_Bip_R_Ring1
+    3807760970: Root/Global/Position/J_Bip_C_Hips/J_Bip_C_Spine/J_Bip_C_Chest/J_Bip_C_UpperChest/J_Bip_C_Neck/J_Bip_C_Head/HairJoint-a4bda69c-cd51-41a2-a49e-b7caa154fa82
     3685745013: Root/Global/Position/J_Bip_C_Hips/J_Bip_C_Spine/J_Bip_C_Chest/J_Bip_C_UpperChest/J_Bip_C_Neck/J_Bip_C_Head/HairJoint-d16d49fc-2856-4c2c-a0a4-cb59f1dc186a/HairJoint-9b976b12-2847-4c85-bc3d-2d7979061b4b/HairJoint-6e9c8e17-6974-4ef9-8b4a-4df1ee80dafb
     3035145128: Root/Global/Position/J_Bip_C_Hips/J_Bip_C_Spine/J_Bip_C_Chest/J_Bip_C_UpperChest/J_Bip_C_Neck/J_Bip_C_Head/HairJoint-bd6bcf8e-c7bc-4c20-8209-ec74430ca3e7/HairJoint-5f0102ac-3f49-478a-958f-fb1f96c03b3c/HairJoint-74a3c8ca-a5e2-46c7-8056-0bf5b8a01aab/HairJoint-273b6352-7d8f-4f2b-a63e-d949e48063ab
-    3807760970: Root/Global/Position/J_Bip_C_Hips/J_Bip_C_Spine/J_Bip_C_Chest/J_Bip_C_UpperChest/J_Bip_C_Neck/J_Bip_C_Head/HairJoint-a4bda69c-cd51-41a2-a49e-b7caa154fa82
+    2364324909: Root/Global/Position/J_Bip_C_Hips/J_Bip_C_Spine/J_Bip_C_Chest/J_Bip_C_UpperChest/J_Bip_R_Shoulder/J_Bip_R_UpperArm/J_Bip_R_LowerArm/J_Bip_R_Hand/J_Bip_R_Ring1
     2513752280: Root/Global/Position/J_Bip_C_Hips/J_Bip_C_Spine/J_Bip_C_Chest/J_Bip_C_UpperChest/J_Bip_C_Neck/J_Bip_C_Head/HairJoint-870c1e60-47fb-404f-9a7b-c2b9637ec353
     2262073563: Root/Global/Position/J_Bip_C_Hips/J_Bip_C_Spine/J_Bip_C_Chest/J_Bip_C_UpperChest/J_Bip_C_Neck/J_Bip_C_Head
     1112204071: Root/Global/Position/J_Bip_C_Hips/J_Bip_C_Spine/J_Bip_C_Chest/J_Bip_C_UpperChest/J_Bip_L_Shoulder/J_Bip_L_UpperArm/J_Bip_L_LowerArm/J_Bip_L_Hand/J_Bip_L_Ring1
