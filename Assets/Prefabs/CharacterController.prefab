@@ -46,3 +46,6 @@ MonoBehaviour:
   dontDestroyOnLoad: 0
   characterObj: {fileID: 8089147893053337806, guid: 45812d44516e840afbdbb7868c116067,
     type: 3}
+  previewField: {fileID: 0}
+  defaultPosition: {x: -3.64, y: -2.83, z: 5.05}
+  defaultScale: {x: 2.529846, y: 2.529846, z: 2.635577}
