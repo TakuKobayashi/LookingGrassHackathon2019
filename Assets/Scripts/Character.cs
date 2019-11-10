@@ -15,7 +15,15 @@ public class Character : MonoBehaviour
     {
         this.threedObject = ComponentUtil.InstantiateTo(this.gameObject, characterModelObj);
         this.characterAnimator = this.threedObject.GetComponent<Animator>();
-        this.characterAnimator.runtimeAnimatorController = updateAnimator;
+        AnimatorOverrideController animatorOverride = new AnimatorOverrideController();
+        animatorOverride.runtimeAnimatorController = updateAnimator;
+        this.characterAnimator.runtimeAnimatorController = animatorOverride;
+        this.ChangetToWalkAnimation();
+    }
+
+    private IEnumerator setTimeout(float second)
+    {
+        yield return new WaitForSeconds(second);
     }
 
     public void ChangetToWalkAnimation()
