@@ -1110,7 +1110,7 @@ GameObject:
   - component: {fileID: 11423888}
   m_Layer: 0
   m_Name: SardineSkinWithDemoScript
-  m_TagString: Untagged
+  m_TagString: feed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
