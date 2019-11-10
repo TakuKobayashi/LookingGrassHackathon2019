@@ -46,3 +46,6 @@ MonoBehaviour:
   characterModelObj: {fileID: 9039251098881793050, guid: 171b05d37f81e11489c766678cdd7d33,
     type: 3}
   updateAnimator: {fileID: 9100000, guid: 2ceaa50017a4946f6a1c1cdfc251c30c, type: 2}
+  changeAnimationDistanceThreshold: 0.001
+  loiterRandomDistanceRange: 2
+  loiterSecondSpan: 3

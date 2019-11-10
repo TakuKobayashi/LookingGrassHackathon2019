@@ -9,9 +9,9 @@ public class Character : MonoBehaviour
     [SerializeField] private RuntimeAnimatorController updateAnimator;
     // 移動距離が距離がこれ以下の場合Idleそれ以外は歩くか走るモーション
     [SerializeField] private float changeAnimationDistanceThreshold = 0.01f;
-    [SerializeField] private float loiterRandomDistanceRange = 0.5f;
+    [SerializeField] private float loiterRandomDistanceRange = 2.0f;
     // うろうろするかどうかの時間の間隔
-    [SerializeField] private float loiterSecondSpan = 1.0f;
+    [SerializeField] private float loiterSecondSpan = 5.0f;
 
     private GameObject threedObject;
     private Animator characterAnimator;
@@ -20,6 +20,8 @@ public class Character : MonoBehaviour
 
     // カメラ目線になるためのもの
     private Vector3? defaultPreviewTargetPosition = null;
+
+    private CharacterState currentState = CharacterState.Idle;
 
     // Start is called before the first frame update
     void Start()
@@ -33,9 +35,10 @@ public class Character : MonoBehaviour
         StartCoroutine(LoiterRandomRoutine());
     }
 
-    public void ChangetToTriggerAnimation(string triggerName)
+    public void ChangetToTriggerAnimation(CharacterState state)
     {
-        this.characterAnimator.SetTrigger(triggerName);
+        this.currentState = state;
+        this.characterAnimator.SetTrigger(state.ToString());
     }
 
     public void InputPreviewTarget(Vector3 targetPosition)
@@ -59,10 +62,10 @@ public class Character : MonoBehaviour
 
     void Update()
     {
-        float moveToDistance = (this.moveToTargetPosition - this.transform.position).sqrMagnitude;
+        float moveToDistance = (this.moveToTargetPosition - this.threedObject.transform.position).sqrMagnitude;
         if(moveToDistance < changeAnimationDistanceThreshold)
         {
-            this.ChangetToTriggerAnimation("Idle");
+            this.ChangetToTriggerAnimation(CharacterState.Idle);
         }
     }
 
@@ -71,20 +74,8 @@ public class Character : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(loiterSecondSpan);
-            bool isLoiter = true;
-            int layerCount = this.characterAnimator.layerCount;
-            for(int i = 0;i < layerCount; ++i)
-            {
-                AnimatorStateInfo animState = this.characterAnimator.GetCurrentAnimatorStateInfo(i);
-                Debug.Log(animState.IsName("Idle"));
-                if (!animState.IsName("Idle"))
-                {
-                    isLoiter = false;
-                    break;
-                }
-            }
-            Debug.Log(isLoiter);
-            if (isLoiter)
+            Debug.Log(this.currentState);
+            if(this.currentState == CharacterState.Idle)
             {
                 LoiterRandom();
             }
@@ -97,7 +88,7 @@ public class Character : MonoBehaviour
         moveToPostion.x = UnityEngine.Random.Range(moveToPostion.x - loiterRandomDistanceRange, moveToPostion.x + loiterRandomDistanceRange);
         moveToPostion.z = UnityEngine.Random.Range(moveToPostion.z - loiterRandomDistanceRange, moveToPostion.z + loiterRandomDistanceRange);
         this.threedObject.transform.LookAt(moveToPostion);
-        this.ChangetToTriggerAnimation("Walk");
+        this.ChangetToTriggerAnimation(CharacterState.Walk);
         StartCoroutine(this.MoveCharacterAnimation(moveToPostion, 2.0f, () =>
         {
             this.threedObject.transform.LookAt(defaultPreviewTargetPosition.GetValueOrDefault());
