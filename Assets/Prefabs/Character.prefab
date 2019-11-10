@@ -43,5 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69169752c22ee4d7ba1d563feb57933a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterModelObj: {fileID: 1522463442269946, guid: 29c640f20d3d69a4daef0af17b12e987,
+  characterModelObj: {fileID: 9039251098881793050, guid: 171b05d37f81e11489c766678cdd7d33,
     type: 3}
+  updateAnimator: {fileID: 9100000, guid: 2ceaa50017a4946f6a1c1cdfc251c30c, type: 2}

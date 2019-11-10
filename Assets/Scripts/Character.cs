@@ -5,13 +5,22 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     [SerializeField] private GameObject characterModelObj;
+    [SerializeField] private RuntimeAnimatorController updateAnimator;
 
     private GameObject threedObject;
+    private Animator characterAnimator;
 
     // Start is called before the first frame update
     void Start()
     {
         this.threedObject = ComponentUtil.InstantiateTo(this.gameObject, characterModelObj);
+        this.characterAnimator = this.threedObject.GetComponent<Animator>();
+        this.characterAnimator.runtimeAnimatorController = updateAnimator;
+    }
+
+    public void ChangetToWalkAnimation()
+    {
+        this.characterAnimator.SetTrigger("Walk");
     }
 
     public void InputPreviewTarget(Vector3 targetPosition)
