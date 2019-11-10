@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 
     public GameObject eatEffect;
     public Vector3 offset = new Vector3(0f, 0f, 0f);
+    private Vector3 growthspeed = new Vector3(0.005f, 0.005f, 0.005f);
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour
             GameObject makeEffect = GameObject.Instantiate(eatEffect) as GameObject;
             makeEffect.transform.position = this.transform.position;
             makeEffect.transform.position += offset;
+            this.transform.localScale += growthspeed;
             makeEffect.GetComponent<ParticleSystem>().Play();
  
         }
